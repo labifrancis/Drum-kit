@@ -61,6 +61,7 @@
 window.addEventListener('keydown', function (e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   if(!audio); // That will just stop the ausio fro playing
+  audio.currentTime = 0; //That will rewind a key when pressed multiple times
   audio.play();
 });
 </script>
